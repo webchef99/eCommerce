@@ -1,21 +1,16 @@
 package android.example.ecommerce;
 
 import android.content.Intent;
-import android.os.Bundle;
-
-import android.view.LayoutInflater;
-import android.view.View;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-
 import android.example.ecommerce.Model.Products;
 import android.example.ecommerce.Prevalent.Prevalent;
 import android.example.ecommerce.ViewHolder.ProductViewHolder;
-
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -30,7 +25,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -119,7 +113,7 @@ public class HomeActivity extends AppCompatActivity
                     {
                         holder.txtProductName.setText(model.getPname());
                         holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
+                        holder.txtProductPrice.setText("Price = " + model.getPrice() + " Rs");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
