@@ -1,8 +1,5 @@
 package android.example.ecommerce;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.example.ecommerce.Prevalent.Prevalent;
 import android.os.Bundle;
@@ -11,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,7 +37,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity
 
 
         totalAmount = getIntent().getStringExtra("Total Price");
-        Toast.makeText(this, "Total Price =  $ " + totalAmount, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Total Price =  Rs " + totalAmount, Toast.LENGTH_SHORT).show();
 
 
         confirmOrderBtn = (Button) findViewById(R.id.confirm_final_order_btn);
